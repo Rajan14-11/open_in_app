@@ -26,7 +26,7 @@ const AuthLAnding = () => {
 
         <div className="grid grid-cols-4 md:grid-cold-4 z-10 w-1/2 mx-auto">
           {socialIcons.map((icon, index) => (
-            <Image src={icon} alt="icon" className="w-[50px] h-[48px]" />
+            <Image key={index} src={icon} alt="icon" className="w-[50px] h-[48px]" />
           ))}
         </div>
         <div className="absolute top-0 bottom-0 left-0 right 0 w-full h-full">
@@ -44,11 +44,11 @@ const AuthLAnding = () => {
 
           <div className="flex w-full my-6 items-center justify-between">
             <button className="px-4 py-2 flex items-center bg-white rounded-[10px]" onClick={()=>signIn('google')}>
-              <Image src={Images.google} />
+              <Image src={Images.google} alt='google' />
               <p className="text-secondary text-sm ml-4">Sign in with Google</p>
             </button>
             <button className="px-4 py-2 flex items-center bg-white rounded-[10px]">
-              <Image src={Images.apple} />
+              <Image src={Images.apple} alt='apple' />
               <p className="text-secondary text-sm ml-4">Sign in with Apple</p>
             </button>
           </div>
