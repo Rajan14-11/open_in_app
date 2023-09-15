@@ -83,7 +83,7 @@ const AuthLAnding = () => {
           </div>
         )}
       </div>
-      <div className="w-full md:w-[60%] lg:w-1/2 h-[calc(100vh-8rem)] z-10 mb-6 md:mb-0">
+      <div className="w-full md:w-[60%] lg:w-1/2 h-[calc(100vh-8rem)] xl:h-auto z-10 mb-6 md:mb-0">
         <div className="h-full flex flex-col justify-center w-[80%] sm:w-2/3 lg:w-1/2 mx-auto">
           <h1 className="text-2xl md:text-3xl laptop:text-[36px] font-[700] font-mont ">
             Sign In
@@ -92,7 +92,7 @@ const AuthLAnding = () => {
             Sign in to your account
           </h3>
 
-          <div className="flex desktop:w-full w-full laptop:w-[423px] my-6 laptop:my-[28.5px] items-center justify-between">
+          <div className="flex gap-x-6 laptop:gap-x-0 desktop:gap-x-6 desktop:w-full w-full laptop:w-[423px] my-6 laptop:my-[28.5px] items-center justify-between">
             <button
               className="px-[20.86px] py-[8.78px] flex items-center bg-white rounded-[10px] laptop:w-[198px] laptop:h-[33px] desktop:w-full desktop:h-full"
               onClick={() => signIn("google")}
