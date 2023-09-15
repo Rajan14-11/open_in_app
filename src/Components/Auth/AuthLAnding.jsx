@@ -8,7 +8,7 @@ const AuthLAnding = () => {
     const socialIcons = [
         Images.discord,Images.gitHub,Images.linkedin, Images.twitter
       ]
-    const [sidebar,setsidebar] = useState(true)
+    const [sidebar,setsidebar] = useState(false)
     const router =useRouter()
     const { data, status } = useSession();
     console.log(data)
