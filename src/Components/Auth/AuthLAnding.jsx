@@ -65,7 +65,7 @@ const AuthLAnding = () => {
           </h1>
         </div>
       </div>
-      <div className="w-full md:w-[60%] lg:w-1/2 h-full z-10 mb-6 md:mb-0">
+      <div className="w-full md:w-[60%] lg:w-1/2 h-[calc(100vh-8rem)] z-10 mb-6 md:mb-0">
         <div className="h-full flex flex-col justify-center w-[80%] sm:w-2/3 lg:w-1/2 mx-auto">
           <h1 className="text-2xl md:text-3xl laptop:text-[36px] font-[700] font-mont ">
             Sign In

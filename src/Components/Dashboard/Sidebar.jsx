@@ -32,7 +32,7 @@ const Sidebar = () => {
     ]
   return (
     <div className="h-auto lg:h-[944px] w-24 lg:w-[20%] laptop:min-w-[280px] bg-sidebar-gradient rounded-[20px]">
-      <div className="w-full px-6 xl:px-0 xl:w-2/3 laptop:w-auto mx-auto laptop:m-0 flex flex-col justify-between py-16 laptop:py-[60px] laptop:px-[50px] h-full">
+      <div className="w-full px-6 xl:px-0 xl:w-2/3 laptop:w-auto mx-auto laptop:m-0 flex flex-col justify-between py-7 lg:py-16 laptop:py-[60px] laptop:px-[50px] h-full">
         <div className="text-white flex flex-col gap-16">
           <h1 className="text-white font-[700] text-[36px] font-mont hidden lg:block">
             Board.

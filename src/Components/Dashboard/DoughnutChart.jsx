@@ -60,7 +60,7 @@ const DoughnutChart = () => {
         </div>
         <div className="flex flex-col sm:flex-row w-full  laptop:min-w-[450px] justify-between">
           <Doughnut data={data} className="chart" />
-          <div className="flex sm:flex-col flex-wrap  laptop:min-w-[185px] justify-evenly mt-4 lg:mt-0">
+          <div className="flex sm:flex-col flex-wrap gap-x-2 laptop:min-w-[185px] justify-evenly mt-4 lg:mt-0">
             {/* <div> */}
               <div className="flex">
                 <div className="bg-[#98D89E] w-[10px] h-[10px] rounded-full mr-[10.47px] mt-[6px]"></div>
