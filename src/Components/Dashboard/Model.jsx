@@ -41,7 +41,7 @@ const Model = ({setModelActive,setData}) => {
           <h1 className="w-[252px] text-[20px] text-[#231F20] font-[600] leading-[32px] ">
             Add New Profile
           </h1>
-          <Image src={Images.cross} alt="cross" width={"24px"} height="24px" />
+          <Image src={Images.cross} alt="cross" width={24} height={24} onClick={()=>setModelActive(false)} />
         </div>
         <div
           className={`flex flex-col gap-[24px] p-[24px] ${
