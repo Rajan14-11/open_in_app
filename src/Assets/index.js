@@ -28,4 +28,6 @@ export const Images = {
     twitterIcon:require('./Images/twitter_icon.svg'),
     instagram:require('./Images/instagram.svg'),
     mail:require('./Images/Mail.svg'),
+    sidebarSearch: require('./Images/SidebarSearch.svg'),
+    sidebarnoti: require('./Images/SideNoti.svg'),
 }

@@ -2,11 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
+
 .barchart{
-    width: 100% !important;
-    height: 240px !important;
+    width:350px !important;
+    height: 300px !important;
+}
+@media (min-width:440px) {
+
+    .barchart{
+        width: 500px !important;
+        height: 450px !important;
+    }
+}
+@media (min-width:640px) {
+
+    .barchart{
+        width: 100% !important;
+        height: 240px !important;
+    }
 }
 
 .chart{
-    height: 210px !important;
+    height:170px !important;
+}
+
+
+@media (min-width:1240px) {
+    .chart{
+        height: 210px !important;
+    }
 }

@@ -4,7 +4,7 @@ import DashboardBody from './DashboardBody'
 import Model from './Model'
 import Sidebar from './Sidebar'
 import { useSession } from "next-auth/react";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 
 const Landing = () => {
     const [modelActive, setModelActive] = useState(false);
@@ -16,7 +16,7 @@ const Landing = () => {
 
 
   return (
-    <div className="px-[45px] py-[40px] flex w-[1440px] justify-between bg-background relative">
+    <div className="p-4 sm:px-[45px] sm:py-[40px] flex w-[100%] laptop:w-[1440px] desktop:w-full justify-between bg-background relative">
       <Sidebar />
       <DashboardBody modelActive={modelActive} setModelActive={setModelActive} data={data} />
       {

@@ -39,20 +39,20 @@ const DashboardBody = ({setModelActive,data}) => {
     },
   ];
   return (
-    <div className="w-[1000px] flex flex-col gap-y-6 mt-8 relative">
+    <div className="laptop:min-w-[1000px] lg:w-[75%] w-[calc(95%-6rem)] flex flex-col gap-y-6 mt-8 relative">
       <Topbar />
-      <div className="flex w-[1000px] gap-[17px] items-start">
+      <div className="grid lg:grid-cols-4 sm:grid-cols-2 laptop:min-w-[1000px] w-[100%] gap-[17px] items-start">
         {topcards.map((card, index) => (
           <TopCard key={index} data={card} />
         ))}
       </div>
       <Barchart />
 
-      <div className="flex justify-between w-full">
-       <DoughnutChart/>
-        <ProfileCard setModelActive={setModelActive} data={data}/>
+      <div className="flex flex-col md:flex-row justify-between w-full gap-x-4 gap-y-4 laptop:gap-x-0 desktop:gap-x-4">
+        <DoughnutChart />
+        <ProfileCard setModelActive={setModelActive} data={data} />
       </div>
-     </div>
+    </div>
   );
 };
 

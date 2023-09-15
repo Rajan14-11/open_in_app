@@ -52,32 +52,32 @@ export const data = {
 const DoughnutChart = () => {
 
   return (
-    <div className="w-[480px] h-[300px] bg-white px-[40px] py-[30px] rounded-[20px] border-2 border-color-[#E0E0E0] shadow-barchart">
+    <div className="w-full md:w-[95%] laptop:min-w-[480px] h-fit sm:h-[300px] bg-white px-[30px] laptop:px-[40px] py-[30px] rounded-[20px] border-2 border-color-[#E0E0E0] shadow-barchart">
       <div className="flex flex-col w-full justify-between mb-4 ">
         <div className="flex justify-between">
-          <h1 className="text-[18px] font-[700]">Books Published</h1>
-          <p className="text-[#858585] text-[14px]">1500-2000</p>
+          <h1 className="text-[18px] font-[700] font-mont">Books Published</h1>
+          <p className="text-[#858585] text-[14px] font-mont">1500-2000</p>
         </div>
-        <div className="flex w-[450px] justify-between">
+        <div className="flex flex-col sm:flex-row w-full  laptop:min-w-[450px] justify-between">
           <Doughnut data={data} className="chart" />
-          <div className="flex flex-col w-[185px] justify-evenly">
-            <div>
+          <div className="flex sm:flex-col flex-wrap  laptop:min-w-[185px] justify-evenly mt-4 lg:mt-0">
+            {/* <div> */}
               <div className="flex">
                 <div className="bg-[#98D89E] w-[10px] h-[10px] rounded-full mr-[10.47px] mt-[6px]"></div>
-                <p className="text-[14px] flex flex-col">
+                <p className="text-[14px] flex flex-col font-mont">
                   Before 1700
-                  <span className="text-[12px] text-[#858585]">
+                  <span className="text-[12px] text-[#858585] font-secondary">
                     {(newdata[0] / total) * 100}%
                   </span>
                 </p>
               </div>
-            </div>
+            {/* </div> */}
             <div>
               <div className="flex">
                 <div className="bg-[#F6DC7D] w-[10px] h-[10px] rounded-full mr-[10.47px]  mt-[6px]"></div>
-                <p className="text-[14px] flex flex-col">
+                <p className="text-[14px] flex flex-col font-mont">
                   Before 1900
-                  <span className="text-[12px] text-[#858585]">
+                  <span className="text-[12px] text-[#858585] font-secondary">
                     {(newdata[1] / total) * 100}%
                   </span>
                 </p>
@@ -86,9 +86,9 @@ const DoughnutChart = () => {
             <div>
               <div className="flex">
                 <div className="bg-[#EE8484] flex flex-col w-[10px] h-[10px] rounded-full mr-[10.47px]  mt-[6px]"></div>
-                <p className="text-[14px] flex flex-col">
+                <p className="text-[14px] flex flex-col font-mont">
                   Before 2100
-                  <span className="text-[12px] text-[#858585]">
+                  <span className="text-[12px] text-[#858585] font-secondary">
                     {(newdata[2] / total) * 100}%
                   </span>
                 </p>

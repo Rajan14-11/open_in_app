@@ -70,26 +70,27 @@ export const data = {
 
 const Barchart = () => {
   return (
-    <div className="w-[1000px] h-auto bg-white px-[40px] py-[30px] rounded-[20px] border-2 border-color-[#E0E0E0] shadow-barchart">
-      <div className="flex w-full justify-between mb-4 ">
+    <div className="laptop:min-w-[1000px] w-full h-auto bg-white p-4 sm:px-[40px] sm:py-[30px] rounded-[20px] border-2 border-color-[#E0E0E0] shadow-barchart">
+      <div className="flex flex-col sm:flex-row w-full justify-between mb-4 ">
         <div className="">
-          <h1 className="text-[18px] font-[700]">Harry Potter Movies</h1>
-          <p className="text-[#858585] text-[14px]">In Million Dollars</p>
+          <h1 className="text-[18px] font-[700] font-mont">Harry Potter Movies</h1>
+          <p className="text-[#858585] text-[14px] font-mont">In Million Dollars</p>
         </div>
 
         <div className="flex">
           <div className="flex items-center mr-[35px]">
             <div className="bg-[#98D89E] w-[10px] h-[10px] rounded-full mr-[10.47px]"></div>
-            <p className="text-[14px]">Budget</p>
+            <p className="text-[14px] font-secondary">Budget</p>
           </div>
           <div className="flex items-center">
             <div className="bg-[#EE8484] w-[10px] h-[10px] rounded-full mr-[10.47px]"></div>
-            <p className="text-[14px]">Box Office</p>
+            <p className="text-[14px] font-secondary">Box Office</p>
           </div>
         </div>
       </div>
-
+      <div className='w-full h-full overflow-x-scroll'>
       <Bar options={chartoptions} data={data} className="barchart" />
+      </div>
     </div>
   );
 }
