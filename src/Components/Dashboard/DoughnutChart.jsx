@@ -86,7 +86,7 @@ const DoughnutChart = () => {
             <div>
               <div className="flex">
                 <div className="bg-[#EE8484] flex flex-col w-[10px] h-[10px] rounded-full mr-[10.47px]  mt-[6px]"></div>
-                <p className="text-[14px]">
+                <p className="text-[14px] flex flex-col">
                   Before 2100
                   <span className="text-[12px] text-[#858585]">
                     {(newdata[2] / total) * 100}%
