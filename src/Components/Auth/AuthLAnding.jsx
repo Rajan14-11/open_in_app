@@ -19,7 +19,7 @@ const AuthLAnding = () => {
 
 
   return (
-    <div className="flex laptop:w-[1440px] desktop:w-[100vw] md:h-screen flex-col md:flex-row justify-between bg-background">
+    <div className="flex laptop:w-[1440px] desktop:w-[100vw] md:h-screen flex-col md:flex-row justify-between bg-background overflow-y-hidden">
       <div className="w-full md:w-[40%] lg:w-1/2 relative h-full flex flex-col justify-between z-10 md:px-[73px] md:py-[60px] hidden md:flex">
         <h1 className="text-white text-2xl laptop:text-[24px] desktop:text-3xl laptop:font-[700] font-pop relative z-10">
           LOGO
