@@ -88,7 +88,7 @@ const Barchart = () => {
           </div>
         </div>
       </div>
-      <div className='w-full h-full overflow-x-scroll'>
+      <div className='w-full h-full overflow-x-scroll sm:overflow-hidden'>
       <Bar options={chartoptions} data={data} className="barchart" />
       </div>
     </div>
