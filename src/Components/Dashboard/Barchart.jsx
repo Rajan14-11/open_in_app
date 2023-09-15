@@ -77,7 +77,7 @@ const Barchart = () => {
           <p className="text-[#858585] text-[14px] font-mont">In Million Dollars</p>
         </div>
 
-        <div className="flex">
+        <div className="flex flex-col xsm:flex-row">
           <div className="flex items-center mr-[35px]">
             <div className="bg-[#98D89E] w-[10px] h-[10px] rounded-full mr-[10.47px]"></div>
             <p className="text-[14px] font-secondary">Budget</p>

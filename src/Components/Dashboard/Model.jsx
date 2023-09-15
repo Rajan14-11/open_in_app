@@ -33,7 +33,7 @@ const Model = ({setModelActive,setData}) => {
     // <div className="w-full h-full ">
     <div className="w-full h-full flex justify-center items-center backdrop-brightness-50">
       <div
-        className={`w-[544px] ${
+        className={`w-[95%] xsm:w-4/5 sm:w-[544px] ${
           basicActive ? "h-[553px]" : "h-[463px]"
         } rounded-[16px] bg-white shadow-model pt-[16px] flex flex-col justify-between items-center`}
       >
@@ -182,6 +182,10 @@ const Model = ({setModelActive,setData}) => {
             <button className="bg-[#3E84F8] rounded-[8px] py-[8px] px-[16px] font-[600] text-white text-[14px] leading-[24px] hidden"></button>
             <div className="flex gap-[8px] items-center">
               <button
+               onClick={()=>{
+                setSocialActive(false);
+                setBasicActive(true)
+               }}
                 className={`border-[1px] border-color-[#999CA0] rounded-[8px] py-[8px] px-[16px] font-[600] text-[#231F20] text-[14px] leading-[24px] ${
                   basicActive && "hidden"
                 }`}

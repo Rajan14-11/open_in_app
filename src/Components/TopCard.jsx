@@ -4,7 +4,7 @@ import React from 'react'
 
 const TopCard = ({data}) => {
   return (
-    <div className="w-full laptop:w-[237.32px] desktop:w-full h-[120px] rounded-xl bg-white drop-shadow-card px-[27px] py-[18.5px]">
+    <div className="w-full laptop:w-[237.32px] desktop:w-full h-[120px] rounded-xl bg-white drop-shadow-card px-4 xsm:px-[27px] py-[18.5px]">
       <div
         className={`w-[31.829px] h-[31.829px] rounded-full ${
           data?.title === "Total Revenue"

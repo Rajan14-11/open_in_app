@@ -54,7 +54,7 @@ const DoughnutChart = () => {
   return (
     <div className="w-full md:w-[95%] laptop:min-w-[480px] h-fit sm:h-[300px] bg-white px-[30px] laptop:px-[40px] py-[30px] rounded-[20px] border-2 border-color-[#E0E0E0] shadow-barchart">
       <div className="flex flex-col w-full justify-between mb-4 ">
-        <div className="flex justify-between">
+        <div className="flex justify-between flex-col xsm:flex-row">
           <h1 className="text-[18px] font-[700] font-mont">Books Published</h1>
           <p className="text-[#858585] text-[14px] font-mont">1500-2000</p>
         </div>
