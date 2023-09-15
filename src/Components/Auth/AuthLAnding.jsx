@@ -1,13 +1,14 @@
 import { Images } from '@/Assets'
 import Image from 'next/image'
-import React from 'react'
+import React, { useState } from 'react'
 import { useSession, signIn} from "next-auth/react";
 import { useRouter } from 'next/navigation';
 
 const AuthLAnding = () => {
     const socialIcons = [
         Images.discord,Images.gitHub,Images.linkedin, Images.twitter
-    ]
+      ]
+    const [sidebar,setsidebar] = useState(true)
     const router =useRouter()
     const { data, status } = useSession();
     console.log(data)
@@ -15,6 +16,7 @@ const AuthLAnding = () => {
     if(status==='authenticated')
     // redirect('/dashboard')
     router.push('/dashboard')
+
 
   return (
     <div className="flex laptop:w-[1440px] desktop:w-[100vw] md:h-screen flex-col md:flex-row justify-between bg-background">
@@ -28,7 +30,7 @@ const AuthLAnding = () => {
           </h1>
         </div>
 
-        <div className="grid grid-cols-4 md:grid-cold-4 z-10 w-3/4 lg:w-2/3 mx-auto desktop:w-1/2 laptop:w-[299px] laptop mx-0 laptop:ml-[71px] desktop:mx-auto">
+        <div className="grid grid-cols-4 md:grid-cols-4 z-10 w-full lg:w-2/3 mx-auto desktop:w-1/2 laptop:w-[299px] laptop:mx-0 laptop:ml-[71px] desktop:mx-auto">
           {socialIcons.map((icon, index) => (
             <Image
               key={index}
@@ -48,10 +50,9 @@ const AuthLAnding = () => {
       </div>
 
       <div className="bg-[#4285F4] flex w-full justify-between items-center h-20 py-4 px-8 md:hidden mb-6 ">
-
-          <h1 className="text-white text-xl sm:text-2xl font-pop relative z-10">
-            LOGO
-          </h1>
+        <h1 className="text-white text-xl sm:text-2xl font-pop relative z-10">
+          LOGO
+        </h1>
 
         <div className="relative z-10 m-auto">
           <h1 className="text-white font-[700] text-3xl sm:text-4xl font-mont">
@@ -59,11 +60,28 @@ const AuthLAnding = () => {
           </h1>
         </div>
 
-        <div>
+        <div className='w-8' onClick={() => setsidebar(!sidebar)}>
+          {
+            sidebar? <Image src={Images.close} alt="close"/>:
           <h1 className="text-white text-lg sm:text-xl cursor-pointer font-pop relative z-10">
             Links
           </h1>
+          }
         </div>
+        {sidebar && (
+          <div className={`${sidebar?'translate-y-0':'translate-y-[100%]'} absolute right-0 left-0 bottom-0 h-20 bg-[#4285F4] w-full z-[100] m-auto flex items-center justify-center ease-out duration-[20000ms]`}>
+            <div className="grid grid-cols-4 md:grid-cols-4 z-10 w-full mx-auto place-items-center">
+              {socialIcons.map((icon, index) => (
+                <Image
+                  key={index}
+                  src={icon}
+                  alt="icon"
+                  className="w-[42px] h-[41px] hover:scale-[1.1] ease-in cursor-pointer"
+                />
+              ))}
+            </div>
+          </div>
+        )}
       </div>
       <div className="w-full md:w-[60%] lg:w-1/2 h-[calc(100vh-8rem)] z-10 mb-6 md:mb-0">
         <div className="h-full flex flex-col justify-center w-[80%] sm:w-2/3 lg:w-1/2 mx-auto">

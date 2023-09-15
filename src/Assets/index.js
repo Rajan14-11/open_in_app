@@ -6,6 +6,7 @@ export const Images = {
     discord: require('./Images/discord.svg'),
     google: require('./Images/google.svg'),
     apple: require('./Images/apple.svg'),
+    close: require('./Images/close.svg'),
 
     // Dashboard pics
 
