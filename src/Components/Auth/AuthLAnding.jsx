@@ -11,7 +11,7 @@ const AuthLAnding = () => {
     const [sidebar,setsidebar] = useState(false)
     const router =useRouter()
     const { data, status } = useSession();
-    console.log(data)
+    console.log(data,status)
     if (status === "loading") return <h1> loading... please wait</h1>;
     if(status==='authenticated')
     // redirect('/dashboard')
@@ -95,7 +95,11 @@ const AuthLAnding = () => {
           <div className="flex gap-x-6 laptop:gap-x-0 desktop:gap-x-6 desktop:w-full w-full laptop:w-[423px] my-6 laptop:my-[28.5px] items-center justify-between">
             <button
               className="px-[20.86px] py-[8.78px] flex items-center bg-white rounded-[10px] laptop:w-[198px] laptop:h-[33px] desktop:w-full desktop:h-full"
-              onClick={() => signIn("google")}
+              onClick={() => signIn("google"
+              ,{
+                callbackUrl:`${window.location.origin}/dashboard`
+              }
+              )}
             >
               <Image src={Images.google} alt="google" />
               <p className="text-secondary text-[12px] font-mont ml-[11px]">

@@ -33,7 +33,7 @@ const Topbar = () => {
           className="cursor-pointer w-[18px] h-[20.888px] ml-[13.79px] mr-[27.61px] hidden xsm:block"
         />
         <div
-          onClick={() => signOut()}
+          onClick={() => signOut({callbackUrl:`${window.location.origin}`})}
           className="w-[30px] h-[30px] rounded-full cursor-pointer"
         >
           <Image
